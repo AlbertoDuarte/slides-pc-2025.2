@@ -1,0 +1,18 @@
+\begin{frame}{Tarefas e prazos}
+    \metroset{block=fill}
+
+    \begin{block}{Problema (D da lista de gulosos)}
+        Você tem $n \leq 10^5$ tarefas. Cada tarefa tem uma data de entrega $d$ e uma duração $a$. A recompensa de terminar uma tarefa é $d - f$, onde $f$ é o tempo de finalização da tarefa. Qual é a maior recompensa, se escolher a ordem de execução das tarefas de forma ótima?
+    \end{block} \pause
+
+    Ideias? \pause
+
+    Fazer os problemas com o menor prazo primeiro? Consideremos $a_1 = 1000, f_1 = 1, a_2 = 1, f_2 = 10$. O custo de fazer a tarefa $1$ primeiro é muito maior do que fazer a tarefa $2$ primeiro (faça as contas!). \pause
+
+    {\bf Solução.} Fazer os problemas com menor duração primeiro. \pause
+
+    {\bf Prova.} Consideremos que fazemos a tarefa $i$ e, logo após, a tarefa $j$, e que $a_i > a_j$, e suponhamos que a recompensa total é $C$. Se trocarmos $i$ e $j$ na ordem de tarefas executadas, a nova recompensa será \pause
+        \[ C - a_i + a_j < C \ . \]
+
+\end{frame}
+

@@ -1,0 +1,21 @@
+\begin{frame}{Subconjuntos}
+    \metroset{block=fill}
+
+    % \begin{block}{Solução recursiva}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/subsets-recursivo.cpp}    
+    % \end{block}
+
+    Seja $b$ um número inteiro e consideremos sua representação binária. Este número representará um subconjunto $S$ da seguinte forma: o $i$-ésimo elemento do conjunto original estará no subconjunto escolhido se, e somente se, o $i$-ésimo bit de $b$ está ligado. \pause
+
+    {\bf Exemplo.} O número $110_2$ representa o subconjunto $\{7, 11\}$ de $\{5,  7, 11\}$. \pause
+
+    Portanto, iterando por todos os números de $0$ até $2^n -1$ e considerando os subconjuntos associados, estaremos iterando por todos os subconjuntos de um conjunto de $n$ elementos. \pause
+
+    \begin{block}{Solução iterativa}
+        \footnotesize
+        \inputminted{cpp}{codigos/subsets-iterativo.cpp}    
+    \end{block}
+
+\end{frame}
+

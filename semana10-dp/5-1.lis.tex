@@ -1,0 +1,43 @@
+\begin{frame}{LIS}
+    \metroset{block=fill}
+
+    \begin{block}{Problema da maior subsequência crescente (LIS)}
+        \footnotesize
+        Dado um vetor com $n \leq 1000$ elementos, encontre sua maior subsequência crescente.
+    \end{block}
+
+    Exemplo: \pause
+    \begin{center}
+        \tikz[nodes={draw,circle}] {
+            \node (1) at (0, 0) {3};
+            \node (3) at (2, 0) {5};
+            \node (6) at (5, 0) {2};
+            \node (8) at (7, 0) {8};
+            
+            \only<2>{
+                \node (2) at (1, 0) {2};
+                \node (4) at (3, 0) {4};
+                \node (5) at (4, 0) {6};
+                \node (7) at (6, 0) {9}; 
+            }
+            \only<3>{
+                \node[fill=red] (2) at (1, 0) {2};
+                \node[fill=red] (4) at (3, 0) {4};
+                \node[fill=red] (5) at (4, 0) {6};
+                \node[fill=red] (7) at (6, 0) {9}; 
+            }
+        }
+    \end{center} \pause
+
+    Uma subsequência crescente com maior comprimento possível é $(2, 4, 6, 9)$ (em vermelho).
+
+    Vamos definir uma função $\DP(i)$ como sendo a maior subsequência começando na posição $i$. Como definimos $\DP(i)$ recursivamente, isto é, a partir de $\DP(j)$ para $i < j$?
+
+    \[ \DP(i) = \max_{i < j \text{ e } v_i < v_j}(\DP(j)+1) \ . \]
+
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

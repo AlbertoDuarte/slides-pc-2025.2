@@ -1,0 +1,17 @@
+\begin{frame}{Código de busca binária}
+    \metroset{block=fill}
+
+    \begin{itemize}
+        \item Mantemos dois inteiros $l$ e $r$, correspondendo ao intervalo $[l, r]$ que ainda deve ser verificado.
+        \item Escolhemos um índice $mid = (l+r)/2$, que divide o intervalo $[l, r]$ em dois subintervalos com diferença de tamanho no máximo $1$.
+        \item Verificamos o elemento $v_{mid}$ para saber se ficamos com o intervalo $[l, mid-1] ou $[mid+1, r]$.
+    \end{itemize}
+
+
+    \begin{block}{Fila}
+        \footnotesize
+        \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    \end{block}
+    
+
+\end{frame}

@@ -1,0 +1,16 @@
+\begin{frame}{Árvore de segmentos - soma}
+    \metroset{block=fill}
+
+    Seja $i$ o índice a ser atualizado, e val o novo valor de $v_i$.
+    \begin{itemize}
+        \item Começamos na raiz da árvore, que representa o intervalo $[1, n]$. O algoritmo será recursivo em função do nó.
+        \item Considere que estamos no nó correspondente ao intervalo $[lx, rx]$. Apenas um dos filhos representa um intervalo contendo $i$. Se $i \in [lx, mid]$ então chamamos recursivamente para o filho da esquerda, caso contrário, chamamos recursivamente para o filho da direita.
+        \item No final de ambos os casos, o valor de um dos filhos será atualizado. Isso significa que o valor do nó atual deverá ser atualizado (será a soma dos valores dos filhos).
+    \end{itemize}
+
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

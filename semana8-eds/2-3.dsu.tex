@@ -1,0 +1,21 @@
+\begin{frame}{DSU}
+    \metroset{block=fill}
+
+    Podemos implementar uma estrutura de dados melhor, sem a necessidade da utilização de sets. É uma estrutura de dados que chamamos de DSU (Disjoint set union).
+
+    {\bf Ideia principal.} No lugar de manter vários sets, cada conjunto terá um único representante. Isto é implementado de forma que cada nó tenha um pai, e o representante seja a raiz da árvore gerada. Assim, as operações são:
+    
+    \begin{itemize}
+        \item União: sejam $a$ o representante do menor conjunto e $b$ o representante do maior conjunto. Definiremos o novo pai de $a$ sendo $b$.
+        \item Procura: para saber se $a$ e $b$ estão no mesmo conjunto, basta ver se possuem o mesmo representante.
+    \end{itemize}
+
+    Pela heurística de \textit{small to large}, a partir de cada elemento, é necessário visitar até $\log n$ vértices até chegar na raiz da árvore.
+
+
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

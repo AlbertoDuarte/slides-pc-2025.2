@@ -1,0 +1,22 @@
+\begin{frame}{Estudando algoritmos}
+    \metroset{block=fill}
+
+    \begin{block}{Problema (B da lista de gulosos)}
+        Samuel quer aprender novos algoritmos. Ele tem o total de $X$ minutos livres. Existem $N$ algoritmos, e cada um deles requer $a_i$ minutos. Encontre a maior quantidade de algoritmos que Samuel pode aprender.
+    \end{block}
+
+    \only<2-3> {
+    \pause Intuitivamente, queremos estudar primeiro os algoritmos com o menor tempo de aprendizagem primeiro. \pause
+    
+    {\bf Solução.} Ordene o array de algoritmos, e aprenda os algoritmos na ordem até não houver mais tempo livre.
+    }
+
+    \onslide<4-> {
+    {\bf Prova da corretude.} Seja $S$ o subconjunto de algoritmos que serão estudados. Suponha que $S$ seja uma resposta válida (isto é, tenha a maior quantidade possível de algoritmos). \pause
+
+    Consideremos o seguinte caso: suponhamos que $i \in S$, $j \not\in S$ e que $a_i > a_j$. \pause Ou seja, há um algoritmo com menor tempo do que um que foi escolhido. Então o tempo necessário para aprender todos os algoritmos no conjunto $S \cup \{j\} \setminus \{i\}$ é menor do que o tempo para os de $S$. \pause
+    
+    {\bf Conclusão.} Repetindo o processo acima algumas vezes, provamos que existe um conjunto $S$ que é uma resposta válida tal que: não existem $i \in S$ e $j \not\in S$ tal que $a_i > a_j$. \pause Note que {\bf NÃO} precisamos repetir o processo acima.
+    }
+\end{frame}
+

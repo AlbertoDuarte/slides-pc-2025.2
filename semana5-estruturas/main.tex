@@ -1,0 +1,62 @@
+\documentclass{beamer}
+\usetheme{metropolis}           % Use metropolis theme
+
+\input{../defines/defines.tex}
+
+\title{{\Large Programação Competitiva}\\ Semana 5: Estruturas de dados}
+\date{17 de Setembro, 2025}
+\author{Alberto Tavares Duarte Neto}
+\institute{Universidade de Brasília}
+
+\usepackage[natbib=true,style=authoryear,backend=bibtex,useprefix=true]{biblatex}
+\addbibresource{references.bib}
+
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{multicol}
+% \usepackage{amsmath}
+% \usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage[]{minted}
+
+\usepackage{amsfonts, amsthm, amsmath, amssymb}
+% \usepackage[bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
+%\usepackage{empheq}
+
+\numberwithin{equation}{subsection}
+\usepackage{hyperref}
+
+
+\begin{document}
+    \maketitle
+    \small
+
+
+    %%% falar de stack e queue
+    %%% falar de pq
+
+    %%% sets:
+
+    % falar que eh uma arvore binaria de busca (log n)
+    % problema da mediana
+    % venice set
+
+    %%% maps:
+
+    % falar que eh um set de pairs
+
+    
+    \input{0-estruturas.tex}
+    \input{1.1-pilha.tex}
+    \input{1.2-fila.tex}
+    \input{1.3-fila-prioridade.tex}
+    \input{1.4-fila-prioridade2.tex}
+
+    \input{2.1-bst.tex}
+    \input{2.2-bst2.tex}
+    \input{2.3-sets.tex}
+    \input{2.4-sets2.tex}
+
+
+
+\end{document}

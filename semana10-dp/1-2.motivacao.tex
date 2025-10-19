@@ -1,0 +1,55 @@
+\begin{frame}{Motivação}
+    \metroset{block=fill}
+
+    \begin{block}{Problema da Moeda}
+        Considere $n \leq 10^5$ moedas em uma fileira com valores inteiros. Sejam $v_1, v_2, \dots, v_n$ os valores das moedas em ordem. Você deve escolher $k \leq n$ moedas de forma que:
+        \begin{itemize}
+            \item Nenhum par de moedas consecutivas é escolhida.
+            \item A soma dos valores das moedas é maximizada.
+        \end{itemize}
+    \end{block}
+
+    \only<2-3>{
+        Algoritmo guloso 1: pegar sempre a maior quantidade de moedas funciona? Não! No exemplo abaixo, o ótimo é pegar a moeda de valor $50$.
+
+        \begin{center}
+            \tikz[nodes={draw, circle}] {
+                \node (1) at (0, 0) {10};
+                \node[fill=red] (2) at (1, 0) {50};
+                \node (3) at (2, 0) {31};
+
+                \graph {
+                %     (1) -- (2) -- (3);
+                }
+            }
+        \end{center}
+    }
+    \only<4-5>{
+        Algoritmo guloso 2: pegar o máximo entre a soma das moedas ímpares e a soma das moedas pares. WA!
+
+        No exemplo abaixo, o ótimo é pegar as moedas em vermelho.
+
+        \begin{center}
+            \tikz[nodes={draw, circle}] {
+                \node[fill=red] (1) at (0, 0) {50};
+                \node (2) at (1, 0) {40};
+                \node (3) at (2, 0) {30};
+                \node[fill=red] (4) at (3, 0) {50};
+                \node (5) at (4, 0) {25};
+                \node[fill=red] (6) at (5, 0) {25};
+
+                \graph {
+                %     (1) -- (2) -- (3);
+                }
+            }
+        \end{center}
+    }
+
+    
+    
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

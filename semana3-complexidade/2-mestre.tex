@@ -1,0 +1,18 @@
+\begin{frame}{Teorema Mestre}
+    \metroset{block=fill}
+
+    \begin{Theorem}[Teorema Mestre]
+        Sejam $a \geq 1$ e $b \geq 1$ constantes, $f(n)$ uma função, e $T(n)$ definida nos inteiros não-negativos pela recorrência
+            \[ T(n) = aT(n/b) + f(n) \ , \]
+        interpretando $n/b$ como $\lceil n/b \rceil$ ou $\lfloor n/b \rfloor$. Então $T(n)$ tem os seguintes limites:
+            \begin{itemize}
+                \item[(i)] Se $f(n) = O(n^{\log_b a - \varepsilon})$ para alguma constante $\varepsilon > 0$, então $T(n) = \Theta(n^{\log_b a})$.
+                
+                \item[(ii)] Se $f(n) = \Theta(n^{\log_b a})$, então $T(n) = \Theta(n^{\log_b a} \log n)$.
+
+                \item[(iii)] Se $f(n) = \Omega(n^{\log_b a + \varepsilon})$ para alguma constante $\varepsilon > 0$, e se $af(n/b) \leq c f(n)$ para alguma constante $c < 1$ e todo $n$ suficientemente grande, então $T(n) = \Theta(f(n))$.
+            \end{itemize}
+    \end{Theorem}
+
+    
+\end{frame}

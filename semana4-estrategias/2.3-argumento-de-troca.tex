@@ -1,0 +1,23 @@
+\begin{frame}{Argumento de troca}
+    \metroset{block=fill}
+
+    \begin{block}{Método do argumento de troca}
+        O argumento de troca é muito utilizado para mostrar que certas escolhas não precisam ser consideradas. \pause
+        \footnotesize
+        \begin{itemize}
+            \item {\bf Passo 1}. Consideramos uma possível resposta. \pause
+            \item {\bf Passo 2}. Mostramos que, a partir de uma certa troca de escolhas, a nova escolha continua sendo uma resposta. \pause
+            \item {\bf Passo 3}. Analisamos quais escolhas nunca valem a pena ser consideradas.
+        \end{itemize}
+    \end{block} \pause
+    \footnotesize
+    Analisemos novamente a prova do slide anterior: \pause
+    \begin{itemize}
+        \item Passo 1. Consideramos um subconjunto $S$ com a maior quantidade possível de algoritmos. \pause
+        \item Passo 2. Se trocarmos um algoritmo $i \in S$ por um algoritmo $j \in S$ tal que $a_i > a_j$, o novo conjunto continua sendo uma resposta válida. \pause
+        \item Passo 3. Concluimos que não vale a pena considerar os subconjuntos que não consistem nos menores elementos, já que sempre podemos trocar um algoritmo em $S$ por outro com tempo menor fora de $S$.
+    \end{itemize}
+    % Note que só existe uma única resposta que consiste apenas nos menores elementos.
+
+\end{frame}
+

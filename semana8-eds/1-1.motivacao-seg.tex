@@ -1,0 +1,31 @@
+\begin{frame}{Motivação}
+    \metroset{block=fill}
+
+    \begin{block}{Problema}
+        São dados um vetor $v_1, \dots, v_n$ de $n \leq 10^5$ inteiros e um inteiro $q \leq 10^5$. Teremos $q$ consultas, que podem ser de dois tipos:
+            \begin{itemize}
+                \item[(i)] recebe-se dois inteiros $l, r$ com $1 \leq l \leq r \leq n$, e deve-se imprimir a soma $v_l + v_{l+1} + \cdots + v_r$,
+                \item[(ii)]recebe-se dois inteiros $i, x$ com $1 \leq i \leq n$ e $-10^9 \leq x \leq 10^9$, e deve-se atualizar $v_i = x$. Não é necessário imprimir valores nesse tipo de consulta.
+            \end{itemize}
+    \end{block}
+
+    Vimos a técnica de soma de prefixos (psum). Qual é o problema dela?
+
+    Ao atualizar o valor da posição $i$, é necessário atualizar os valores do vetor de psum da posição $i$ até a posição $n$. Em outras palavras, o valor $\operatorname{psum}[i]$ depende dos valores das posições $1, 2, \dots, i$.
+    % \begin{center}
+    %     \begin{tikzpicture}[every node/.style={circle, draw=black}]
+    %         \node {1}[grow=0]
+    %             child { node {2} 
+    %                 child {node {3}
+    %                     child {node {4}}}
+    %             }
+    %         ;
+    %     \end{tikzpicture}
+    % \end{center}
+    
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

@@ -1,0 +1,20 @@
+\begin{frame}[fragile]
+    \frametitle{Uma complexidade notável}
+    \metroset{block=fill}
+
+    \begin{block}{Problema}
+        Encontra quantos primos existem de $1$ até $n$, para $n \leq 10^6$.
+    \end{block} \pause
+
+    É possível testar se um número é primo em $O(\sqrt{n})$, mas testar todos os números de $1$ até $n$ terá aproximadamente $10$ segundos de execução. \pause
+
+    Uma outra abordagem é, para cada número, marcar que seus múltiplos não são primos. \pause
+
+    \begin{block}{Crivo de eratóstenes}
+        \footnotesize
+        \inputminted{cpp}{codigos/crivo.cpp}    
+    \end{block}
+
+    A complexidade do algoritmo acima é: \pause $O(n \log n)$.
+
+\end{frame}

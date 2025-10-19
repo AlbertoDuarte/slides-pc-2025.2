@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n}{priority\PYGZus{}queue}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{st}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{st}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{l+m+mi}{7}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{st}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{st}\PYG{p}{.}\PYG{n}{top}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{endl}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// imprime o 7}
+\PYG{+w}{    }\PYG{n}{st}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}\PYG{+w}{ }\PYG{c+c1}{// apaga o 7}
+\PYG{+w}{    }\PYG{n}{st}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{st}\PYG{p}{.}\PYG{n}{top}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{endl}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// imprime o 10}
+\end{Verbatim}

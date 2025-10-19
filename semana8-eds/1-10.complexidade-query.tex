@@ -1,0 +1,86 @@
+\begin{frame}{Árvore de segmentos - soma}
+    \metroset{block=fill}
+
+    \begin{block}{Proposição}
+        Para calcular a soma de um intervalo $[l, r]$, é necesário escolher apenas $2 \log(n)$ vértices da maneira ótima, onde $n$ é a quantidade de nós na árvore.
+    \end{block}
+    {\bf Ideia da prova.} Podemos provar por indução. Consideremos a menor altura a ser escolhida. Se escolhermos $3$ vértices consecutivos, ou os dois primeiros ou os dois últimos terão o ancestral comum, e bastaria escolher esse ancestral, que tem a soma igual a dois dois filhos. Não escolheremos vértices não consecutivos pela continuidade do intervalo $[l, r]$.
+
+    Considemos o nível $k+1$. Por indução, escolhemos apenas $2$ vértices do nível $k$. Seja $u$ um destes vértices e $p_u$ seu ancestral. Seja $v$ o filho de $p_u$ diferente de $u$. O vértice $v$ tem altura $k$, e escolheremos no máximo um de seus filhos, que terá altura $k+1$. Pela continuidade do intervalo, os únicos candidatos da altura $k+1$ vem deste processo.
+
+
+    % \begin{center}
+    %     \begin{tikzpicture}[
+    %         every node/.style={
+    %             draw,
+    %             rectangle,
+    %             align=center,
+    %             minimum width=0.625cm,
+    %             minimum height=0.7cm
+    %         },
+    %         node distance=0.5cm and 0.0cm
+    %     ]
+    
+    %     \node[minimum width=5.0cm, below left=of 1,  xshift=5.0cm] (2) {[0, 3]};
+    %     \node[minimum width=5.0cm, below right=of 1, xshift=-5.0cm] (3) {[4, 7]};
+    
+    %         \node[minimum width=2.5cm, below left=of 2,  xshift=2.5cm] (4) {[0, 1]};
+    %         \node[minimum width=2.5cm, below right=of 2, xshift=-2.5cm] (5) {[2, 3]};
+
+    %             \node[minimum width=1.25cm, below left=of 4,  xshift=1.25cm] (8) {[0, 0]};
+    %             \node[minimum width=1.25cm, below right=of 4, xshift=-1.25cm] (9) {[1, 1]};
+
+    %             \node[minimum width=1.25cm, below left=of 5,  xshift=1.25cm] (10) {[2, 2]};
+    %             \node[minimum width=1.25cm, below right=of 5, xshift=-1.25cm] (11) {[3, 3]};
+
+    %         \node[minimum width=2.5cm, below left=of 3,  xshift=2.5cm] (6) {[4, 5]};
+    %         \node[minimum width=2.5cm, below right=of 3, xshift=-2.5cm] (7) {[6, 7]};
+
+    %             \node[minimum width=1.25cm, below left=of 6,  xshift=1.25cm] (12) {[4, 4]};
+    %             \node[minimum width=1.25cm, below right=of 6, xshift=-1.25cm] (13) {[5, 5]};
+
+    %             \node[minimum width=1.25cm, below left=of 7,  xshift=1.25cm] (14) {[6, 6]};
+    %             \node[minimum width=1.25cm, below right=of 7, xshift=-1.25cm] (15) {[7, 7]};
+
+
+    %     \node[minimum width=1.25cm, below=of 8] (0') {[0, 0]};
+    %     \node[minimum width=1.25cm, below=of 9] (1') {[1, 1]};
+    %     \node[minimum width=1.25cm, below=of 10] (2') {[2, 2]};
+    %     \node[minimum width=1.25cm, below=of 11] (3') {[3, 3]};
+    %     \node[minimum width=1.25cm, below=of 12] (4') {[4, 4]};
+    %     \node[minimum width=1.25cm, below=of 13] (5') {[5, 5]};
+    %     \node[minimum width=1.25cm, below=of 14] (6') {[6, 6]};
+    %     \node[minimum width=1.25cm, below=of 15] (7') {[7, 7]};
+
+
+
+    % % Edges
+    % \draw (1) -> (2);
+    % \draw (1) -> (3);
+
+    % \draw (2) -> (4);
+    % \draw (2) -> (5);
+
+    %     \draw (4) -> (8);
+    %     \draw (4) -> (9);
+
+    %     \draw (5) -> (10);
+    %     \draw (5) -> (11);
+
+    % \draw (3) -> (6);
+    % \draw (3) -> (7);
+
+    %     \draw (6) -> (12);
+    %     \draw (6) -> (13);
+
+    %     \draw (7) -> (14);
+    %     \draw (7) -> (15);
+    
+    % \end{tikzpicture}
+    % \end{center}
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

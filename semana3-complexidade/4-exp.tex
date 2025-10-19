@@ -1,0 +1,18 @@
+\begin{frame}[fragile]
+    \frametitle{Tyzz}
+    \metroset{block=fill}
+
+    \begin{block}{Código de exponenciação rápida}
+        \footnotesize
+        \inputminted{cpp}{codigos/fexp.cpp}    
+    \end{block}
+
+    A complexidade assintótica da função acima é dada pela função $T(n) = T(n/2) + 1$. Temos $\log_2 1 = 0$, logo $f(n) = \Theta(n^0) = \Theta(1)$. Pelo Teorema Mestre, vale
+        \[ T(n) =  \Theta(\log n) \ . \]
+
+    \begin{block}{Exercício}
+        Pesquise o algortimo de Karatsuba, e calcule sua complexidade assintótica com o Teorema Mestre.
+    \end{block}
+
+    
+\end{frame}

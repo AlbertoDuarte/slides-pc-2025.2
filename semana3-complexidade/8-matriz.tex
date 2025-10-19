@@ -1,0 +1,30 @@
+\begin{frame}
+    \frametitle{Um problema não trivial}
+    \metroset{block=fill}
+
+    \begin{block}{Problema}
+        De quantas maneiras podemos preencher um tabuleiro $1 \times n$ com peças $1 \times 1$ e $1 \times 2$?
+    \end{block} \pause
+
+    O número de maneiras pode ser modelado recursivamente como $f(n) = f(n-1) + f(n-2)$. Vejamos uma abordagem diferente: \pause
+    \begin{align*}
+        \begin{pmatrix}
+            1 & 1 \\
+            1 & 0
+        \end{pmatrix} \cdot 
+        \begin{pmatrix}
+            f(n) \\
+            f(n-1)
+        \end{pmatrix} = \pause
+        \begin{pmatrix}
+            f(n) + f(n-1) = f(n+1) \\
+            f(n)
+        \end{pmatrix}
+    \end{align*} \pause
+
+    Seja $A$ a matriz acima e $v_n = (f(n), f(n-1))$. \pause A equação acima diz que $Av_n = v_n+1$. Como $A v_{n+1} = v_{n+2}$, Temos
+        \[ A(Av_n) = v_{n+2} \ . \] \pause
+    Pela associatividade da multiplicação de matrizes, $A^2 v_n = v_{n+2}$. Assim, $A^{10^{18} - 1} v_1 = v_{10^{18}}$. \pause
+
+    {\bf Solução.} Use o algoritmo de exponenciação rápida para calcular $A^n$ em $O(\log n)$.
+\end{frame}

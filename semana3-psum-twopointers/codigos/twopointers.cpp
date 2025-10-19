@@ -1,0 +1,11 @@
+int r = -1, l = 0, soma = 0, resposta = 0;
+while(r < n) { // cuidado com x = 0
+    if(soma >= x) {
+        if(soma == x) resposta++;
+        soma -= v[l]; l++;
+    }
+    else if(soma < x) {
+        r++; 
+        if(r < n) soma += v[r];
+    }
+}

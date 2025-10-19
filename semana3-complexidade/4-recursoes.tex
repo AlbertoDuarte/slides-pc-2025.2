@@ -1,0 +1,17 @@
+\begin{frame}{Recursão}
+    \metroset{block=fill}
+
+    Em um algoritmo recursivo, é possível escrever a função de complexidade assintótica como uma função recursiva. \pause
+
+    Temos os seguintes métodos para estimar a complexidade de um algoritmo recursivo:
+
+    \begin{itemize} \pause
+        \item[(i)] {\bf Indução}: chute a complexidade de $T$ e use o passo indutivo para provar. Pouco útil em Maratonas. \pause
+        
+        \item[(ii)] {\bf Árvore de recursão}: escreva a árvore de recursão de $T$, com cada nó contendo a complexidade de resolver aquelee passo, e faça a soma de todos os nós. \pause
+        
+        \item[(iii)] {\bf Método Mestre}: se $T(n) = aT(n/b) + f(n)$ para $a \geq 1$ e $b > 1$, o Teorema Mestre nos dá complexidade de $T$.
+    \end{itemize}
+
+\end{frame}
+

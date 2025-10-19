@@ -1,0 +1,14 @@
+\begin{frame}{Sets}
+    \metroset{block=fill}
+
+    Um \textit{set} em C++ é implementado como uma árvore binária de busca. Temos os seguintes métodos para acessar elementos de um set:
+
+    \begin{itemize}
+        \item find(x): retorna um iterator para o elemento $x$, se houver, ou set.end() caso contrário.
+        \item lower\_bound(x): retorna um iterator para o menor elemento maior ou igual a $x$, ou set.end() caso contrário.    
+        \item upper\_bound(x): retorna um iterator para o menor elemento maior que $x$, ou set.end() caso contrário.
+    \end{itemize}
+
+    Para acessar o elemento de um iterator \textit{it}, usamos o operador *: *it.
+
+\end{frame}

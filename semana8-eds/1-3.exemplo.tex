@@ -1,0 +1,33 @@
+\begin{frame}{PSUM = TLE}
+    \metroset{block=fill}
+
+    Vamos cortar a dependência de $p_3$ para $p_2$ (isto é, cortar a aresta $p_3 \to p_2$). Neste caso, teremos $p_1 = v_1$ e $p_3 = v_3$, então desconsideraremos $p_1$ e $p_3$. Temos:
+    \begin{center}
+        \tikz {
+        \node (1) at (0,0) {$v_1$};
+        \node (2) at (1,0) {$v_2$};
+        \node (3) at (2,0) {$v_3$};
+        \node (4) at (3,0) {$v_4$};
+
+        % \node (p1) at (0,1) {$p_1$};
+        \node (p2) at (1,1.5) {$p_2$};
+        % \node (p3) at (2,2) {$p_3$};
+        \node (p4) at (3,2.5) {$p_4$};
+
+        \graph { 
+            (p4) -> {(4), (3)};
+            % (p3) -> {(3), (p2)};
+            (p2) -> {(2), (1)};
+            % (p1) -> (1);
+        };
+        }
+    \end{center}
+    
+    Temos um problema: como agora $p_4 = v_3+v_4$, não temos uma variável que tenha o valor $v_1+v_2+v_3+v_4$. Adicionamos um valor $r = p_2 + p_4$ e reorganizamos a árvore:
+
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

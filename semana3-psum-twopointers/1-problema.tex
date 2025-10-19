@@ -1,0 +1,15 @@
+\begin{frame}{Motivação}
+    \metroset{block=fill}
+
+    \begin{block}{Problema}
+        É dado um vetor de $n$ inteiros, com $n \leq 10^5$, e um inteiro $q \leq 10^5$. São feitas $q$ consultas: cada consulta consiste em uma linha com dois inteiros $l, r$ com $1 \leq l \leq r \leq n$, e você deve calcular a soma dos elementos do vetor de $l$ até $r$.
+    \end{block} \pause
+
+    \begin{block}{Solução \textit{naive}}
+        \footnotesize
+        \inputminted{cpp}{codigos/naive.cpp}    
+    \end{block}
+
+    Complexidade: \pause $O(nq)$.
+\end{frame}
+

@@ -1,0 +1,25 @@
+\begin{frame}{Small to large}
+    \metroset{block=fill}
+
+    \footnotesize 
+
+    \begin{block}{Problema}
+        São dados dois inteiros $n$ e $q$, com $n, q \leq 10^5$. Considere que inicialmente temos $n$ conjuntos $\{1\}, \{2\}, \dots, \{n\}$. Serão feitas $q$ consultas, podendo ser de dois tipos:
+        \begin{itemize}
+            \item $1$ $i$ $j$ - faça a união do conjunto que contém $i$ com o conjunto que contém $j$.
+            \item $2$ $i$ $j$ - responda se $i$ e $j$ estão no mesmo conjunto. 
+        \end{itemize}
+    \end{block}
+
+    Vamos primeiro analisar o algoritmo força bruta. Declaramos um vector com $n$ sets, com o $i$-ésimo set contendo inicialmente apenas o inteiro $i$. Para cada inteiro $i$, armazenamos o índice do conjunto que o contém.
+
+    Para cada operação de união, inserimos todos os elementos do set de índice $i$ no set de índice $j$ (e atualizamos o índice do set destes elementos), e zeramos o set $i$.
+
+    Para cada operação do tipo $2$, apenas verificamos os índices do conjunto que as contém são iguais. Complexidade total: $O(nq \log n)$.
+
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

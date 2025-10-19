@@ -1,0 +1,13 @@
+\begin{frame}{Código}
+    \metroset{block=fill}
+
+    Vamos assumir que $v_i \leq n$ para todo $i$.
+    \begin{block}{Implementação da LIS otimizada}
+        \footnotesize
+        \inputminted{cpp}{codigos/lis2.cpp}    
+    \end{block}
+
+    Complexidade: $O(n \log n)$.
+
+    {\bf Observação}: se $v_i \leq 10^9$, a priori não será possível declarar a Segtree. Podemos comprimir os valores:
+\end{frame}

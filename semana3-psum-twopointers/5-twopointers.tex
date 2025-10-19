@@ -1,0 +1,19 @@
+\begin{frame}{Dois ponteiros}
+    \metroset{block=fill}
+
+    Propriedade importante do problema: Fixe o pointeiro $l$. Ao aumentar o $r$, a soma só aumenta. Ao aumentar $l$, a soma só diminui.  \pause
+
+    Em outras palavras:
+    \begin{itemize}
+        \item Se $l$ está fixo, a soma é monotônica como função de $r$.
+        \item Se $r$ está fixo, a soma é monotônica como função de $l$.
+    \end{itemize} \pause
+
+    Seja $S$ a soma de $l$ até $r$. Analisemos os seguintes casos: \pause
+    \begin{itemize}
+        \item Se $S > x$, nenhum intervalo $[l, r']$ com $r' > r$ vai ter soma igual a $x$. Devemos aumentar $l$. \pause
+        \item Se $S <= x$, nenhum intervalo $[l', r]$ com $l' > l$ vai ter soma igual a $x$. Devemos aumentar $l$. No caso de igualdade, aumentamos a resposta em $1$. \pause
+    \end{itemize}
+    
+\end{frame}
+

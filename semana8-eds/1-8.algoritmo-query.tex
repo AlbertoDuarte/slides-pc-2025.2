@@ -1,0 +1,17 @@
+\begin{frame}{Árvore de segmentos - soma}
+    \metroset{block=fill}
+
+    Seja $[l, r]$ o intervalo que queremos calcular. Supondo que a árvore de segmentos já está montada, o algoritmo para calcular a soma de $l$ até $r$ é:
+    \begin{itemize}
+        \item Começamos na raiz da árvore, que contém a soma do intervalo $[1, n]$. O algoritmo será recursivo em função do nó.
+        \item Considere que estamos no nó correspondente ao intervalo $[lx, rx]$. Se $lx > rx$ então retornamos $0$. Caso contrário, consideramos dois casos:
+        \item Caso 1: $[lx, rx] \not \subset [l, r]$. Isso significa que existem elementos no intervalo $[lx, rx]$ que não queremos na soma. Chamamos recursivamente para os intervalos $[lx, mid]$ e $[mid+1, rx]$, onde $mid = (lx+rx)/2$, e retornamos a soma dos retornos dessas chamadas.
+        \item Caso 2: $[lx, rx] \subset [l, r]$. Neste caso, retornamos a soma do nó atual.
+    \end{itemize}
+
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

@@ -1,0 +1,13 @@
+\begin{frame}{Por que busca binária}
+    \metroset{block=fill}
+
+    Por que não podemos apenas utilizar lower\_bounds e sets?
+
+    \begin{itemize}
+        \item Existem problemas interativos: existe um vetor escondido, e você pode fazer poucas consultas neste vetor para determinar alguma informação (problema B da lista). \pause
+        \item Existem problemas em que o espaço de busca não é um vetor de inteiros, e sim um intervalo de números reais. \pause
+        \item Uma aplicação da busca binária, chamada de {\bf busca binária na resposta}, resolve problemas em que verificar alguma propriedade em função de um inteiro $x$ é custoso, mas é monotônico (veremos a seguir).
+    \end{itemize}
+
+\end{frame}
+

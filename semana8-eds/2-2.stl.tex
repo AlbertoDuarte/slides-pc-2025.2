@@ -1,0 +1,23 @@
+\begin{frame}{Small to large}
+    \metroset{block=fill}
+
+    \footnotesize 
+    O que causa a complexidade ruim da força bruta é a grande quantidade de inserções que devemos fazer. 
+    
+    Consideremos a seguinte heurística: se o set de índice $i$ for menor, então inserimos todos os elementos do set $i$ no set $j$; caso contrário, inserimos todos os elementos do set $j$ no set $i$.
+
+    \begin{block}{Proposição}
+        Com a heurística acima, serão feitas no máximo $n \log n$ inserções.
+    \end{block}
+    {\bf Prova.} Consideremos um elemento $x$ qualquer. Afirmamos que este elemento vai mudado de conjunto no máximo $\log n$ vezes. De fato, se ele foi inserido em outro set, o set de destino tem tamanho maior ou igual ao set de origem. Neste caso, a união terá pelo menos o dobro do tamanho do set de origem. Após $\log n$ inserções deste elemento, necessariamente o conjunto que o contém tem $n$ elementos, não sendo mais possível novas inserções de $x$.
+
+    Considerando que qualquer elemento vai ser inserido no máximo $\log n$ vezes, serão feitas no máximo $n \log n$ inserções.
+
+
+
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

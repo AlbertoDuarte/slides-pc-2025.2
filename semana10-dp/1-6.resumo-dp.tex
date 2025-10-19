@@ -1,0 +1,16 @@
+\begin{frame}{Resumo da DP da moeda}
+    \metroset{block=fill}
+
+    Resumo do processo:
+    \begin{itemize}
+        \item Escolha estados que representem seu problema.
+        \item Escreva uma função que resolva o problema a partir de subproblemas.
+        \item Calcule a complexidade. Se a transição de cada estado tem a mesma complexidade, então a complexidade total é $O(estados * transicao)$.
+    \end{itemize}
+
+    No problema anterior, decidimos escolher as moedas da esquerda para a direita. Então o estado deve ser $E = \{0, 1, \dots, n\}$, onde $i \in E$ representa que ainda temos as moedas $i, i+1, \dots, n-1$ para escolher.
+
+    A função recursiva que resolve o problema é $$\DP(i) = \max(\DP(i+1), v_i + \DP(i+2)) \ .$$.
+
+    Como a transição de todo estado é constante, a complexidade é $O(n)$.
+\end{frame}

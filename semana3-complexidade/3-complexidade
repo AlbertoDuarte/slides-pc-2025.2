@@ -1,0 +1,11 @@
+\begin{frame}{Complexidade assintótica}
+    \metroset{block=fill}
+
+    \begin{block}{Definição}
+        A {\bf complexidade computacional} de um algoritmo é a quantidade de recursos computacionais necessária para executá-lo. A {\bf complexidade computacional assintótica} de um algoritmo é a estimativa da complexidade computacional utilizando a análise assintótica.
+    \end{block}
+
+
+
+\end{frame}
+

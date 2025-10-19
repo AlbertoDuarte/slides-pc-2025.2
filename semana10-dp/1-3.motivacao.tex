@@ -1,0 +1,21 @@
+\begin{frame}{Força bruta}
+    \metroset{block=fill}
+
+    Vamos primeiro construir uma função recursiva $f$ que resolve o problema com complexidade ruim.
+
+    Seja $f(i)$ a função que retorna a maior soma possível considerando apenas as moedas $i, i+1, \dots, n-1$ (0-indexada). Temos dois casos:
+    \begin{itemize}
+        \item Pegamos a moeda $i$; neste caso não podemos pegar a moeda $i+1$, então $ = v_i + f(i+1)$.
+        \item Não pegamos a moeda $i$. Ainda podemos pegar a moeda $i+1$, então $f(i) = f(i+1)$.
+    \end{itemize}
+    Como esses são os dois únicos casos, então
+        \[ f(i) = \max(f(i+1), v_i + f(i+2)) \ . \] 
+    A complexidade de $f$ é a mesma do algoritmo que calcula fibonacci recursivamente, que é aproximadamente $O(1.6180^n)$. Isso da TLE para $n \geq 40$.
+    
+    
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

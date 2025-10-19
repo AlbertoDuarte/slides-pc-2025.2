@@ -1,0 +1,23 @@
+\begin{frame}{Limites}
+    \metroset{block=fill}
+
+    \begin{block}{Proposição}
+        Seja
+        \[ \lim_{n \to \infty} \frac{f(n)}{g(n)} = c \ . \]
+        Então \pause
+            \begin{itemize}
+                \item[(i)] se $c > 0$, então $f(n) = \Theta(g(n))$; \pause
+                \item[(ii)] se $c = 0$, então $f(n) = O(g(n))$ e $g(n) \not= O(f(n))$; \pause
+                \item[(iii)] se $c = \infty$, então $g(n) = O(f(n))$ e $f(n) \not= O(g(n))$; \pause
+            \end{itemize}
+    \end{block}
+
+
+    \begin{block}{Exemplo}
+            Temos
+                \[\lim_{n \to \infty} \frac{4^n}{2^n} = \lim_{n \to \infty} 2^n = \infty \ ,\]
+            portanto $4^n \not = O(2^n)$. De forma geral, se $a > b$ são números reais positivos, então $a^n \not=O(b^n)$
+    \end{block}
+
+\end{frame}
+

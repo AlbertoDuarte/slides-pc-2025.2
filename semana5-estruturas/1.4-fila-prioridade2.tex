@@ -1,0 +1,18 @@
+\begin{frame}{Fila de prioridade}
+    \metroset{block=fill}
+
+    A cada inserção ou remoção, é feito um rebalanceamento na árvore para que sua altura seja sempre $\log n$, onde $n$ é a quantidade de elementos na estrutura. Assim, é possível realizar as operações com as seguintes complexidades:
+
+    \begin{itemize}
+        \item Acesso: $O(1)$.
+        \item Inserção: $O(\log n)$.
+        \item Remoção: $O(\log n)$.
+    \end{itemize}
+
+    \begin{block}{Fila de prioridade}
+        \footnotesize
+        \inputminted{cpp}{codigos/fila-prioridade.cpp}    
+    \end{block}
+    
+\end{frame}
+

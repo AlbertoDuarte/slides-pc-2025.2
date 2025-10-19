@@ -1,0 +1,26 @@
+\begin{frame}{Motivação}
+    \metroset{block=fill}
+
+    \begin{block}{Problema da mochila}
+        \footnotesize
+        Você tem $n \leq 1000$ objetos e uma mochila com capacidade $c \leq 1000$. Cada objeto tem um valor $v_i$ e um peso $p_i$. Você deve escolher objetos para colocar na mochila satisfazendo:
+        \begin{itemize}
+            \item A soma dos pesos dos objetos escolhidos não deve ultrapassar $c$.
+            \item A soma dos valores dos objetos escolhidos deve ser maximizada.
+        \end{itemize}
+    \end{block}
+
+    Antes de passar para o próximo slide, tente escolher os estados e escreva a recorrência para que o código seja executado em menos de $1$ segundo.
+
+    Escolheremos os objetos da esquerda para a direita. Definimos $\DP(i, p)$ onde $i$ representa que podemos escolher as moedas $i, i+1, \dots, n-1$ e $p$ representa o peso dos objetos escolhidos até então. 
+
+    Testando as possibilidades de pegar ou não o objeto $i$, a transição é definida pela fórmula
+        \[ \DP(i, k) = \max(\DP(i+1, k), v_i + \DP(i+1, k+p_i)) \ . \]
+
+    
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

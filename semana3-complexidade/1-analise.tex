@@ -1,0 +1,24 @@
+\begin{frame}{Análise assintótica}
+    \metroset{block=fill}
+
+    \begin{block}{Definição}
+        Sejam $f(n)$ e $g(n)$ funções não negativas. Definimos
+        \begin{align*}
+            O(g(n)) = \{ f(n) \mid &\text{ existem constantes positivas } c \text{ e } n_0 \text{ tais que } \\
+            &  0 \leq f(n) \leq cg(n)  \text{ para todo } n \geq n_0 \} \ . 
+        \end{align*} \pause
+        Se $f(n) \in O(g(n))$, dizemos que $g(n)$ limita superiormente $f(n)$. Escrevemos $f(n) = O(g(n))$. \pause Dizemos que $f(n) = \Theta(g(n))$ se $O(f(n)) = O(g(n))$.
+    \end{block} \pause
+
+    \begin{block}{Exemplos}
+        \begin{itemize}
+            \item[(i)] $f(n) = 2n^2 + 3n + 7 = O(n^2)$. \pause
+            
+            \item[(ii)] $\log_b(n) = O(\log_2(n))$ para qualquer $b > 1$, pois
+                \[ log_2(n) = \frac{\log_b(n)}{\log_b(2)} \ . \]
+        \end{itemize}
+        
+    \end{block}
+
+\end{frame}
+

@@ -1,0 +1,17 @@
+\begin{frame}{Lower bound}
+    \metroset{block=fill}
+
+    O c++ possui uma função que recebe os iterators de um vector e um inteiro $x$, e retorna o primeiro elemento maior ou igual a $x$ de um vetor ordenado: a função \textit{lower\_bound}.
+
+    A implementação do lower\_bound é uma busca binária utilizado estes iterators. \pause
+
+    {\bf Observação}. Não confundir o método lower\_bound do set com a função lower\_bound. Utilizar a função lower\_bound no set te dará TLE! 
+
+
+    \begin{block}{Lower bound em ação}
+        \footnotesize
+        \inputminted{cpp}{codigos/lower-bound.cpp}    
+    \end{block}
+
+\end{frame}
+

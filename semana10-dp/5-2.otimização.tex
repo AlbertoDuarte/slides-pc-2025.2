@@ -1,0 +1,15 @@
+\begin{frame}{Otimização}
+    \metroset{block=fill}
+
+    \begin{block}{Implementação da LIS quadrática}
+        \footnotesize
+        \inputminted{cpp}{codigos/lis.cpp}    
+    \end{block}
+
+    Complexidade: $O(n^2)$.
+
+    \[ \DP(i) = \max_{i < j \text{ e } v_i < v_j}(\DP(j)+1) \ . \]
+
+
+
+\end{frame}

@@ -1,0 +1,15 @@
+\begin{frame}{Generalizando}
+    \metroset{block=fill}
+
+    Seja $P: \{1, \dots, m\} \to \{0, 1\}$ uma função. Definiremos $P(x) = 1$ se uma propriedade com respeito a $x$ vale, e $P(x) = 0$ caso contrário. Por exemplo, no problema anterior definimos que $P(x) = 1$ se conseguimos dividir o vetor em $k$ subvetores cuja maior soma seja $\leq x$, e $P(x) = 0$ caso contrário. \pause
+
+    Se a função $P$ for {\bf não decrescente}, podemos realizar uma busca binária para encontrar o menor inteiro $x$ tal que $P(x) = 1$. \pause
+    
+    \begin{itemize}
+        \item Em certo passo, nosso espaço de busca é $[l, r]$. \pause
+        \item Chute $mid = (l+r)/2$ e calcule $P(mid)$. \pause
+        \item Se $P(mid) = 1$, então restringimos nosso espaço de busca para $[l, mid-1]$. \pause
+        \item Se $P(mid = 0)$, então restringimos nosse espaço de busca para $[mid+1, r]$.
+    \end{itemize}
+\end{frame}
+

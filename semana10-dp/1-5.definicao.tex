@@ -1,0 +1,15 @@
+\begin{frame}{DP da moeda}
+    \metroset{block=fill}
+
+    \begin{block}{Definição}
+        Seja $f$ uma função recursiva. Chamaremos um elemento $i$ do domínio da função de {\bf estado} e chamaremos o código que faz as chamadas recursivas de {\bf transição}.
+    \end{block}
+
+    O código da função dos slides anteriores é:
+
+    \begin{block}{Implementação da memoização}
+        \footnotesize
+        \inputminted{cpp}{codigos/moeda.cpp}    
+    \end{block}
+    A complexidade de uma DP é a soma da complexidade da transição de cada estado. Como a transição do código acima é sempre constante, então a complexidade é $O(estados) = O(n)$.
+\end{frame}

@@ -1,0 +1,18 @@
+\begin{frame}{Motivação}
+    \metroset{block=fill}
+
+    \begin{block}{Problema}
+        É dado um vetor de $n$ inteiros e um inteiro $x$. Quantos subvetores (contíguos) tem soma exatamente $x$?
+    \end{block} \pause
+
+    A solução \textit{naive} neste caso consiste em iterar todos os subvetores. A quantidade de subvetores é exatamente $n(n-1)/2$. 
+
+    \begin{block}{Solução \textit{naive}}
+        \footnotesize
+        \inputminted{cpp}{codigos/naive2.cpp}    
+    \end{block}
+
+    
+    Complexidade: \pause $O(nq)$.
+\end{frame}
+

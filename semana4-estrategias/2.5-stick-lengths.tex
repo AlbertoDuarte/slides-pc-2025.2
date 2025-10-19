@@ -1,0 +1,17 @@
+\begin{frame}{Gravetos}
+    \metroset{block=fill}
+
+    \begin{block}{Problema (H da lista de gulosos)}
+        Existem $n \leq 2\cdot10^5$ gravetos, cada um com comprimento $c_i \leq 10^9$. Você pode realizar a seguinte operação quantas vezes quiser: escolher um graveto $i$ e aumentar ou diminuir seu comprimento por $x > 0$. O custo dessa operação é $x$. Qual é o menor custo para que todos os gravetos tenham o mesmo tamanho?
+    \end{block} \pause
+
+    {\bf Solução busca completa.} Para todo comprimento $d$ de $1$ até $10^9$, calcule o custo de transformar todos os gravetos para o tamanho $d$. A resposta será o menor de todos os custos. \pause TLE. \pause
+
+    Suponhamos que o custo para transformar todos os gravetos em $d$ seja $C$. Se considerarmos $d+1$, o custo $C$ aumenta em $1$ para cada graveto com comprimento original $c_i \leq d$, e diminui em $1$ para cada graveto com comprimento original $c_j > d$. \pause
+
+    {\bf Solução gulosa.} Transforme todos os gravetos para o comprimento mediano dos gravetos. \pause
+
+    
+
+\end{frame}
+

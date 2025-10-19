@@ -1,0 +1,19 @@
+\begin{frame}{Complexidade assintótica}
+    \metroset{block=fill}
+
+    \begin{block}{Definição}
+        A {\bf complexidade computacional} de um algoritmo é a quantidade de recursos computacionais necessária para executá-lo.
+    \end{block} \pause
+
+    \begin{block}{Definição}
+        A {\bf complexidade computacional assintótica} de um algoritmo é a estimativa da complexidade computacional utilizando a análise assintótica.
+    \end{block} \pause
+
+    Seja $T$ a função tal que $T(n)$ é o número de operações de um determinado algoritmo dado uma entrada de tamanho $n$. \pause Analisamos assintóticamente $T$, ou seja, tentamos calcular $\Theta(T(n))$ ou encontrar funções $f$ tais que $T(n) = O(f(n))$. \pause
+
+    \begin{itemize}
+        \item[(i)] Iterar todos os elementos de um vetor de $n$ elementos tem complexidade $\Theta(n)$. \pause
+        \item[(ii)] Iterar todos os subconjuntos tem complexidade $\Theta(2^n)$.
+    \end{itemize}
+\end{frame}
+

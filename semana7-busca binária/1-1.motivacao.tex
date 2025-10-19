@@ -1,0 +1,16 @@
+\begin{frame}{Motivação}
+    \metroset{block=fill}
+
+    \begin{block}{Problema}
+        Considere um vetor $v_1, \dots, v_n$ {\bf ordenado} ($n \leq 10^5$). Teremos $q \leq  10^5$ consultas. Em cada consulta recebemos um inteiro $x$, e queremos encontrar o menor índice $i$ tal que $v_i \geq x$.
+    \end{block} \pause
+
+    Considere um índice $j$. Como o vetor $v$ está ordenado, temos os seguintes casos: \pause
+    \begin{itemize}
+        \item $v_j < x$, e pela ordenação, nenhum índice $k$ {\bf menor} que $j$ pode ser a resposta, pois $v_k \leq v_j < x$. \pause
+        
+        \item $v_j \geq x$, nenhum índice $k$ {\bf maior} que $j$ pode ser a resposta, pois $x \leq v_j \leq v_k$.
+    \end{itemize} \pause
+    Ou seja, ao verificar o índice $k$, podemos retirar do nosso espaço de busca ou os índices maiores que $k$, ou os índices menores que $k$. Como não sabemos qual será o caso, escolhemos um $k$ que divida na metade.
+\end{frame}
+

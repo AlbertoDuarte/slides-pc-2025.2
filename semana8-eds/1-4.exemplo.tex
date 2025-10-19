@@ -1,0 +1,39 @@
+\begin{frame}{PSUM = TLE}
+    \metroset{block=fill}
+    
+    \begin{center}
+        \tikz {
+        \node (1) at (0,0) {$v_1$};
+        \node (2) at (1,0) {$v_2$};
+        \node (3) at (2,0) {$v_3$};
+        \node (4) at (3,0) {$v_4$};
+
+        % \node (p1) at (0,1) {$p_1$};
+        \node (p2) at (0.5,1) {$p_2$};
+        % \node (p3) at (2,2) {$p_3$};
+        \node (p4) at (2.5,1) {$p_4$};
+
+        \node (r) at (1.5,2) {$r$};
+
+        \graph { 
+            (p4) -> {(4), (3)};
+            % (p3) -> {(3), (p2)};
+            (p2) -> {(2), (1)};
+            % (p1) -> (1);
+            (r) -> {(p2), (p4)};
+        };
+        }
+    \end{center}
+
+    Diminuímos a quantidade máxima de dependências de $4$ para $2$. Notemos que a estrutura que fizemos foi a de uma árvore binária.
+
+    Problema: como fazer a soma $v_2+v_3+v_4$? Podemos soma $v_2$ com $p_4$.
+
+    Será que podemos fazer uma estrutura similar para qualquer tamanho de vetor?
+
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

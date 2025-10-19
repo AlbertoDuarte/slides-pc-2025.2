@@ -1,0 +1,141 @@
+\begin{frame}{Árvore de segmentos - atualização}
+    \metroset{block=fill}
+
+    Vamos atualizar o valor $v_i$ para um inteiro $x$. Devemos atualizar todos os nós que dependem da posição $i$. Precisamos modificar apenas os ancestrais do vértice correspondente ao intervalo $[i, i]$. Como a altura da árvore é $\log_2(n)$, então precisamos modificar apenas $\log_2(n)$ nós. Por exemplo, ao atualizar $i=5$, precisamos atualizar os nós em vermelho abaixo:
+
+    \begin{center}
+        \begin{tikzpicture}[
+            every node/.style={
+                draw,
+                rectangle,
+                align=center,
+                minimum width=0.625cm,
+                minimum height=0.7cm
+            },
+            node distance=0.5cm and 0.0cm
+        ]
+    
+        \node[minimum width=10.0cm, fill=red] (1) {[0, 7]};
+
+        \node[minimum width=5.0cm, below left=of 1,  xshift=5.0cm] (2) {[0, 3]};
+        \node[minimum width=5.0cm, below right=of 1, xshift=-5.0cm, fill=red] (3) {[4, 7]};
+    
+            \node[minimum width=2.5cm, below left=of 2,  xshift=2.5cm] (4) {[0, 1]};
+            \node[minimum width=2.5cm, below right=of 2, xshift=-2.5cm] (5) {[2, 3]};
+
+                \node[minimum width=1.25cm, below left=of 4,  xshift=1.25cm] (8) {[0, 0]};
+                \node[minimum width=1.25cm, below right=of 4, xshift=-1.25cm] (9) {[1, 1]};
+
+                \node[minimum width=1.25cm, below left=of 5,  xshift=1.25cm] (10) {[2, 2]};
+                \node[minimum width=1.25cm, below right=of 5, xshift=-1.25cm] (11) {[3, 3]};
+
+            \node[minimum width=2.5cm, below left=of 3,  xshift=2.5cm, fill=red] (6) {[4, 5]};
+            \node[minimum width=2.5cm, below right=of 3, xshift=-2.5cm] (7) {[6, 7]};
+
+                \node[minimum width=1.25cm, below left=of 6,  xshift=1.25cm] (12) {[4, 4]};
+                \node[minimum width=1.25cm, below right=of 6, xshift=-1.25cm, fill=red] (13) {[5, 5]};
+
+                \node[minimum width=1.25cm, below left=of 7,  xshift=1.25cm] (14) {[6, 6]};
+                \node[minimum width=1.25cm, below right=of 7, xshift=-1.25cm] (15) {[7, 7]};
+
+    % Edges
+    \draw (1) -> (2);
+    \draw (1) -> (3);
+
+    \draw (2) -> (4);
+    \draw (2) -> (5);
+
+        \draw (4) -> (8);
+        \draw (4) -> (9);
+
+        \draw (5) -> (10);
+        \draw (5) -> (11);
+
+    \draw (3) -> (6);
+    \draw (3) -> (7);
+
+        \draw (6) -> (12);
+        \draw (6) -> (13);
+
+        \draw (7) -> (14);
+        \draw (7) -> (15);
+    
+    \end{tikzpicture}
+    \end{center}
+
+
+    % \begin{center}
+    %     \begin{tikzpicture}[
+    %         every node/.style={
+    %             draw,
+    %             rectangle,
+    %             align=center,
+    %             minimum width=0.625cm,
+    %             minimum height=0.7cm
+    %         },
+    %         node distance=0.5cm and 0.0cm
+    %     ]
+    
+    %     \node[minimum width=5.0cm, below left=of 1,  xshift=5.0cm] (2) {[0, 3]};
+    %     \node[minimum width=5.0cm, below right=of 1, xshift=-5.0cm] (3) {[4, 7]};
+    
+    %         \node[minimum width=2.5cm, below left=of 2,  xshift=2.5cm] (4) {[0, 1]};
+    %         \node[minimum width=2.5cm, below right=of 2, xshift=-2.5cm] (5) {[2, 3]};
+
+    %             \node[minimum width=1.25cm, below left=of 4,  xshift=1.25cm] (8) {[0, 0]};
+    %             \node[minimum width=1.25cm, below right=of 4, xshift=-1.25cm] (9) {[1, 1]};
+
+    %             \node[minimum width=1.25cm, below left=of 5,  xshift=1.25cm] (10) {[2, 2]};
+    %             \node[minimum width=1.25cm, below right=of 5, xshift=-1.25cm] (11) {[3, 3]};
+
+    %         \node[minimum width=2.5cm, below left=of 3,  xshift=2.5cm] (6) {[4, 5]};
+    %         \node[minimum width=2.5cm, below right=of 3, xshift=-2.5cm] (7) {[6, 7]};
+
+    %             \node[minimum width=1.25cm, below left=of 6,  xshift=1.25cm] (12) {[4, 4]};
+    %             \node[minimum width=1.25cm, below right=of 6, xshift=-1.25cm] (13) {[5, 5]};
+
+    %             \node[minimum width=1.25cm, below left=of 7,  xshift=1.25cm] (14) {[6, 6]};
+    %             \node[minimum width=1.25cm, below right=of 7, xshift=-1.25cm] (15) {[7, 7]};
+
+
+    %     \node[minimum width=1.25cm, below=of 8] (0') {[0, 0]};
+    %     \node[minimum width=1.25cm, below=of 9] (1') {[1, 1]};
+    %     \node[minimum width=1.25cm, below=of 10] (2') {[2, 2]};
+    %     \node[minimum width=1.25cm, below=of 11] (3') {[3, 3]};
+    %     \node[minimum width=1.25cm, below=of 12] (4') {[4, 4]};
+    %     \node[minimum width=1.25cm, below=of 13] (5') {[5, 5]};
+    %     \node[minimum width=1.25cm, below=of 14] (6') {[6, 6]};
+    %     \node[minimum width=1.25cm, below=of 15] (7') {[7, 7]};
+
+
+
+    % % Edges
+    % \draw (1) -> (2);
+    % \draw (1) -> (3);
+
+    % \draw (2) -> (4);
+    % \draw (2) -> (5);
+
+    %     \draw (4) -> (8);
+    %     \draw (4) -> (9);
+
+    %     \draw (5) -> (10);
+    %     \draw (5) -> (11);
+
+    % \draw (3) -> (6);
+    % \draw (3) -> (7);
+
+    %     \draw (6) -> (12);
+    %     \draw (6) -> (13);
+
+    %     \draw (7) -> (14);
+    %     \draw (7) -> (15);
+    
+    % \end{tikzpicture}
+    % \end{center}
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

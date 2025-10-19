@@ -1,0 +1,36 @@
+\begin{frame}{PSUM = TLE}
+    \metroset{block=fill}
+
+    Seja $p_1, \dots, p_n$ o vetor de soma de prefixos do vetor $v$. Por definição, $p_1 = v_1$ e $p_i = p_{i+1} + v_i$.
+
+    O grafo abaixo nos mostra a dependência dos valores $p_i$; cada $u \to v$ mostra que o valor de $u$ precisa do valor $v$ para ser calculado.
+
+    \begin{center}
+        \tikz {
+        \node (1) at (0,0) {$v_1$};
+        \node (2) at (1,0) {$v_2$};
+        \node (3) at (2,0) {$v_3$};
+        \node (4) at (3,0) {$v_4$};
+
+        \node (p1) at (0,1) {$p_1$};
+        \node (p2) at (1,1.5) {$p_2$};
+        \node (p3) at (2,2) {$p_3$};
+        \node (p4) at (3,2.5) {$p_4$};
+
+        \graph { 
+            (p4) -> {(4), (p3)};
+            (p3) -> {(3), (p2)};
+            (p2) -> {(2), (p1)};
+            (p1) -> (1);
+        };
+        }
+    \end{center}
+
+    Podemos criar uma estrutura para este exemplo que minimize as dependências?
+    
+    % \begin{block}{Implementação da busca binária}
+    %     \footnotesize
+    %     \inputminted{cpp}{codigos/busca.binaria.cpp}    
+    % \end{block}
+
+\end{frame}

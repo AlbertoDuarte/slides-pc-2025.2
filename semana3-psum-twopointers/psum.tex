@@ -1,0 +1,21 @@
+\begin{frame}{Motivação}
+    \metroset{block=fill}
+
+    Calculamos um vetor $p$ da seguinte forma:
+    \begin{gather}
+        p[i] = \begin{cases}
+            v[0], \text{ se } i = 0, \\
+            v[i] + p[i-1], \text{ caso contrário.}
+        \end{cases}
+    \end{gather}
+
+
+
+    \begin{block}{Solução \textit{naive}}
+        \footnotesize
+        \inputminted{cpp}{codigos/naive.cpp}    
+    \end{block}
+
+    Complexidade: $O(nq)$.
+\end{frame}
+

@@ -1,0 +1,28 @@
+\begin{frame}{Soma de prefixos}
+    \metroset{block=fill}
+
+    Calculamos um vetor $p$ da seguinte forma:
+    \begin{gather}
+        p[i] = \begin{cases}
+            v[0], \text{ se } i = 0, \\
+            v[i] + p[i-1], \text{ caso contrário.}
+        \end{cases}
+    \end{gather}
+    \only<2-4>{
+        O que é o valor $p[r] - p[l-1]$. \pause É exatamente
+        \begin{align*}
+            &v[0] + v[1] + \cdots + v[l-1] + v[l] + \cdots + v[r] - \\
+            (&v[0] + v[1] + \cdots + v[l-1]) = \\ \pause
+            & v[l] + \cdots + v[r] \ .
+        \end{align*}
+    }
+    
+    \onslide<5->{
+        \begin{block}{Solução linear}
+            \footnotesize
+            \inputminted{cpp}{codigos/psum.cpp}    
+        \end{block}
+        Complexidade: $\pause O(n + q)$.
+    }
+\end{frame}
+

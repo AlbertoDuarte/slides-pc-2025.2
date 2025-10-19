@@ -1,0 +1,14 @@
+\begin{frame}{Compressão de vetor}
+    \metroset{block=fill}
+
+    {\bf Observação}: se $v_i \leq 10^9$, a priori não será possível declarar a Segtree. Podemos comprimir os valores do vetor antes de construir a Segtree:
+
+    \begin{block}{Compressão}
+        \footnotesize
+        \inputminted{cpp}{codigos/compressao.cpp}    
+    \end{block}
+
+    Essa é uma técnica comum para problemas nos quais os valores em si não importam e usam esse tipo de estrutura de dados.
+
+
+\end{frame}

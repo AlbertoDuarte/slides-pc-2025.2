@@ -1,0 +1,17 @@
+\begin{frame}{Um problema}
+    \metroset{block=fill}
+
+    \begin{block}{Problema}
+        É dado um vetor $v_1, \dots, v_n$ de inteiros, com $n \leq 10^5$, e um inteiro $k \leq n$.  \pause
+
+        Você deve dividir o vetor em $k$ subvetores contíguos de forma que a maior soma de um subvetor seja {\bf minimizada}.
+    \end{block} \pause
+
+    Encontrar um algoritmo que determine imediatamente a resposta é difícil. Porém, conseguimos verificar, para um dado $x$, se a resposta é maior que $x$ ou não. \pause
+
+    Ao "chutar" o valor $x$, conseguimos dividir o vetor gulosamente: adicionamos elementos até que o próximo elemento faça a soma deste subvetor ultrapassar $x$. Verificamos se o número de subvetores é $\leq k$. \pause
+
+    Solução: fazer busca binária no conjunto das possíveis resposta. Ao chutar um valor $x$, verificar se conseguimos uma divisão cuja maior soma seja $\leq x$.
+
+\end{frame}
+

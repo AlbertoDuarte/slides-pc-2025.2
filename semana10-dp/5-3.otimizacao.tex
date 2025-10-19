@@ -1,0 +1,14 @@
+\begin{frame}{LIS}
+    \metroset{block=fill}
+
+    Notemos na fórmula da recursão 
+        \[ \DP(i) = \max_{i < j \text{ e } v_i < v_j}(\DP(j)+1) \]
+    que estamos tomando o máximo entre os valores $\DP(j)$ tais que $v_j \in [v_i+1, \MAX]$. Fazemos isso com um for, que deixa a solução quadrática. Como podemos otimizar isso?
+
+    Vamos criar uma Segtree que calcula máximo de intervalo, e armazenar o valor $\DP(j)$ na posição $v_j$ da Segtree. Se houver mais de uma posição com mesmo valor, armazenamos o maior deles.
+
+    No lugar do for, faremos uma consulta de máximo no intervalo $[v_i+1, \MAX]$.
+
+    
+
+\end{frame}

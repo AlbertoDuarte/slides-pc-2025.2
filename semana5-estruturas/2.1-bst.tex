@@ -1,0 +1,22 @@
+\begin{frame}{Árvore binária de busca}
+    \metroset{block=fill}
+
+    \begin{block}{Definição}
+        Seja $T$ uma árvore binária em que cada nó possui um valor. Dizemos que $T$ satisfaz a propriedade de {\bf árvore binária de busca} se, para todo nó $x$ de $T$, vale:
+            \begin{itemize}
+                \item Se $y$ é um nó na subárvore da esquerda de $x$, então $y.valor \leq x.valor$.
+                \item Se $y$ é um nó na subárvore da direita de $x$, então $y.valor \geq x.valor$.
+            \end{itemize}
+    \end{block}
+
+    O objetivo é manter a árvore com altura balanceada: se a árvore tem $n$ nós, queremos que sua altura seja $\log n$. Assim, a complexidade das operações é
+
+    \begin{itemize}
+        \item Acesso: $O(\log n)$.
+        \item Inserção: $O(\log n)$.
+        \item Remoção: $O(\log n)$.
+    \end{itemize}
+
+
+\end{frame}
+
